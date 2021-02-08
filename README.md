@@ -19,13 +19,13 @@ docker run -d \
     michabbs/ssl_proxy
 ```
 
-Files cert.pem and privkey.pem are necessary, fullchain.pem is opional (but most likely you need it).
+Files `cert.pem` and `privkey.pem` are necessary, `fullchain.pem` is opional (but most likely you need it).
 
-Variable UPSTREAM_SERVER must contain domain name or IP (with optional :port) of the HTTP service you want to convert to HTTPS.
+Variable `UPSTREAM_SERVER` must contain `domain name` or `IP address` (with optional `:port`) of the HTTP service you want to convert to HTTPS.
 
 # Advanced example
 
-Let's add HTTPS to Portainer web interface! Just the following `docker-compose.yml`:
+Let's add HTTPS to Portainer web interface! Just use the following `docker-compose.yml`:
 
 ```
 version: '2'
@@ -62,4 +62,7 @@ volumes:
     portainer_data:
 ```
 
-Remember to set your UPSTREAM_SERVER and ssl certificate paths. Run `docker-compose up -d` and open https://my.domain.com:9000. Magic! :-)
+Remember to set your `UPSTREAM_SERVER` and ssl certificate paths.
+
+Run `docker-compose up -d` and open https://my.domain.com:9000.
+Magic! :-)
